@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+:root {
+  --bg-white-color: #fff;
+  --ff-black-color: #141414;
+  --ff-white-color: #fff;
+  --bg-black-color: #141414;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Bellefair", serif;
+  color: var(--ff-black-color);
+  transition: all 0.15s ease-in;
+  background: linear-gradient(102.7deg, rgb(253, 218, 255) 8.2%, rgb(223, 173, 252) 19.6%, rgb(173, 205, 252) 36.8%, rgb(173, 252, 244) 73.2%, rgb(202, 248, 208) 90.9%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body.darkMode {
+  background-color: var(--bg-black-color);
+  color: var(--ff-white-color);
+  background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid var(--ff-black-color);
+  padding: 2em 0;
+}
+.navbar .navbar__image {
+  width: 30px;
+}
+
+body.darkMode .navbar {
+  border-bottom-color: var(--ff-white-color);
+}
+
+.navbar__button .navbar__toggle {
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.clock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.clock__wrapper {
+  position: absolute;
+}
+
+.numbers__wrapper .number {
+  position: absolute;
+  border-radius: 50%;
+  width: 220px;
+  top: -11px;
+  left: 44.3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.numbers__wrapper .number1 {
+  transform: rotate(120deg);
+}
+
+.numbers__wrapper .number2 {
+  transform: rotate(150deg);
+}
+
+.numbers__wrapper .number3 {
+  transform: rotate(180deg);
+}
+
+.numbers__wrapper .number4 {
+  transform: rotate(210deg);
+}
+
+.numbers__wrapper .number5 {
+  transform: rotate(240deg);
+}
+
+.numbers__wrapper .number6 {
+  transform: rotate(270deg);
+}
+
+.numbers__wrapper .number7 {
+  transform: rotate(300deg);
+}
+
+.numbers__wrapper .number8 {
+  transform: rotate(330deg);
+}
+
+.numbers__wrapper .number9 {
+  transform: rotate(0deg);
+}
+
+.numbers__wrapper .number10 {
+  transform: rotate(30deg);
+}
+
+.numbers__wrapper .number11 {
+  transform: rotate(60deg);
+}
+
+.numbers__wrapper .number12 {
+  transform: rotate(90deg);
+}
+
+.clock__pointers {
+  background-color: var(--bg-black-color);
+  height: 60px;
+  width: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transition: all 0.5s ease;
+}
+
+body.darkMode .clock__pointers {
+  background-color: var(--bg-white-color);
+}
+
+.clock__hour {
+  transform: rotate(0deg);
+}
+
+.clock__minute {
+  transform: rotate(0deg);
+  height: 75px;
+}
+
+.clock__seconds {
+  transform: rotate(0deg);
+  background-color: red;
+  height: 85px;
+}
+
+body.darkMode .clock__seconds {
+  background-color: red;
+}
+
+.clock__center {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.digitalClock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.digitalClock__time {
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.digitalClock__date {
+  font-size: 16px;
+}
+
+@media (max-width: 1280px) {
+  .numbers__wrapper {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
